@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function startJS() {
+            // Penghitungan Nilai Akhir Siswa / Siswi
+
+            // Variable Deklarasi
+
+            let lastH;
+            let lastPTS;
+            let lastPAT;
+
+            let hasilAkhir;
+
+            var UserName = prompt('Masukan Nama Siswa / Siswi');
+            var Kls = prompt('Masukan Kelas Siswa / Siswi');
+            var H = prompt('Masukan Nilai Harian Siswa / Siswi');
+            var PTS = prompt('Masukan Nilai PTS Siswa / Siswi');
+            var PAT = prompt('Masukan Nilai PAT Siswa / Siswi');
+
+            // Hasil Awal
+            alert('Nama Siswa: ' + UserName + ',' + ' Kelas: ' + Kls);
+            alert('Nilai Harian: ' + H + ' Nilai PTS: ' + PTS + ' Nilai PAT: ' + PAT);
+
+            // Penghitungan
+
+            lastH = H * 2;
+            lastPTS = PTS * 1;
+            lastPAT = PAT * 1;
+
+            hasilAkhir = lastH + lastPTS + lastPAT;
+
+            // Hasil Akhir
+
+            alert('Nilai Akhir: ' + hasilAkhir);
+
+            // Import Data To Display HTML
+
+            UserName = document.getElementById('UN') .innerHTML = UserName;
+            Kls = document.getElementById('kl') .innerHTML = Kls;
+            hasilAkhir = document.getElementById('NA') .innerHTML = hasilAkhir;
+
+        }
+    </script>
+    <title>Akhir Nilai DOC</title>
+</head>
+<body>
+    <button onclick="startJS()">Hitung Nilai</button>
+    <div class="demoK">
+        <p>Nama Siswa / Siswi: <p id="UN"></p></p> 
+        <p>Kelas: <p id="kl"></p></p>
+        <p>Nilai Akhir: <p id="NA"></p></p>
+    </div>
+</body>
+</html>
